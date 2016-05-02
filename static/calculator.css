@@ -1,0 +1,170 @@
+/* CSS Document */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700|Open+Sans+Condensed:700);
+
+#calculator { 
+    font-size: 16px; 
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 300; 
+    line-height: 24px;  
+    height: 50%;
+}
+
+
+/* CSS rules go here */
+
+
+html, body {
+    margin: 0;
+    padding-top: 0%;
+    height: 100%;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+
+
+#calculator main {
+    background-color: #999;
+    height: 100%
+}
+
+
+
+#calculator main section {
+    width: 25%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    color: black; 
+    background-size: auto 56%;
+    background: center top 5px no-repeat;
+}
+
+#calculator main section#inc{
+    background-color: blue;
+    background-image: url("../static/images/bulb_inc.svg");
+}
+#calculator main section#hal{
+    background-color: green;
+    background-image: url("../static/images/bulb_hal.svg");
+}
+#calculator main section#led{
+    background-color: orange;
+    background-image: url("../static/images/bulb_led.svg");
+}
+#calculator main section#cfl{
+    background-color: red;
+    background-image: url("../static/images/bulb_cfl.svg");
+}
+
+#calculator main section > div {
+    top:80%;
+    padding: 5px;
+    background-color: rgba(0,0,0,.15);
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+}
+
+#calculator main h4 {
+    font: 1.5vw/2vw 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+
+#calculator main p {
+    margin: 0;
+    font-size: 1.5vw;
+    font-weight: 700;
+    line-height: 1;
+}
+#calculator main p + p { /* for p that immediately follows  p */
+    font-size: 1.4vw;
+    font-weight: 300;
+    line-height: 1.5;
+}
+#calculator main p::after {
+    content: 'w';
+}
+#calculator main p + p::before {
+    content: '$'; 
+}
+#calculator main p + p::after {
+    content: 'per year'; 
+    color: black;
+    padding-left: 4px;
+}
+
+
+
+#calculator form {
+    background-color: #373737;
+    margin: 0;
+    height: 30%;
+}
+#calculator form br {
+    display: none;
+}
+#calculator form > div { /* direct descendant */
+    color: #aaa;
+    width: 33.333%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    padding: 10px 0 5px;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+#calculator form h4 {
+    margin: 0 0 -5px;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+#calculator form p {
+    color: #888;
+    margin: 0 0 10px;
+    font-size: .9em;
+}
+#calculator form input[type="number"],
+#calculator form select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 100px;
+    height: 30px;
+    color: #aaa;
+    background-color: #313131;
+    padding-left: 10px;
+    border: none;
+    outline: 0;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 10px 0px #232323;
+}
+#calculator form input[type="number"] {
+    -moz-appearance: textfield;
+    text-align: left;
+    font-size: 1em;
+}
+#calculator form input[type=number]::-webkit-inner-spin-button, 
+#calculator form input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+}
+#calculator form select {
+    font-size: 1em;
+}
+#calculator form select::-ms-expand {
+    display: none;
+}
+#calculator form span {
+    padding-left: 5px;
+}
